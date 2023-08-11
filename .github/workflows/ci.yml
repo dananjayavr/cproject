@@ -1,11 +1,15 @@
+
 name: ci
 on:
+  # FIXME: if you want this to be available for PRs, uncomment this line
+  # pull_request:
   push:
     branches:
     - main
   schedule:
     - cron: '0 1 * * 0'
- https://docs.docker.com/build/ci/github-actions/share-image-jobs/
+
+# https://docs.docker.com/build/ci/github-actions/share-image-jobs/
 # just using caches instead of artifact upload.
 jobs:
   docker-build:
